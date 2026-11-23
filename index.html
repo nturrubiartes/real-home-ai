@@ -1,45 +1,46 @@
-
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="RealHomeAI"
-  agent-id="c33dc705-838a-452f-b382-0defeb71419c"
-  language-code="en"
-></df-messenger>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Real Home AI</title>
 
 <style>
 
-/* PUT ALL THE CSS HERE */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
 body{
 background:#f5f7fa;
 color:#333;
-font-family:Arial,sans-serif;
-margin:0;
-padding:0;
 }
 
-header{
-background:#1E3A5F;
-color:white;
-padding:80px 20px;
+.hero{
+background:linear-gradient(rgba(30,58,95,0.75),rgba(30,58,95,0.75)),
+url('YOUR-IMAGE-URL-HERE');
+background-size:cover;
+background-position:center;
+height:500px;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+color:white;
+padding:20px;
 }
 
-header h1{
-font-size:48px;
-margin-bottom:15px;
+.hero-content h1{
+font-size:60px;
+margin-bottom:20px;
 }
 
-header p{
-font-size:20px;
-max-width:700px;
-margin:auto;
+.hero-content p{
+font-size:22px;
+margin-bottom:25px;
 }
 
 .btn{
@@ -48,20 +49,20 @@ color:white;
 padding:12px 25px;
 border-radius:30px;
 text-decoration:none;
-display:inline-block;
-margin-top:20px;
+font-weight:bold;
 }
 
 section{
-padding:60px 20px;
+padding:70px 20px;
 max-width:1200px;
 margin:auto;
 }
 
 .section-title{
 text-align:center;
+font-size:38px;
 color:#1E3A5F;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
 .cards{
@@ -74,7 +75,12 @@ gap:20px;
 background:white;
 padding:25px;
 border-radius:15px;
-box-shadow:0px 4px 10px rgba(0,0,0,.1);
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#1E3A5F;
 }
 
 .contact{
@@ -84,6 +90,190 @@ padding:40px;
 border-radius:15px;
 }
 
-.feedback-form{
+.feedback{
 background:white;
-padding:25
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.feedback input,
+.feedback textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.feedback button{
+background:#F97316;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+footer{
+background:#1E3A5F;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero">
+<div class="hero-content">
+<h1>🏡 Real Home AI</h1>
+<p>Your AI-Powered Real Estate Assistant</p>
+<a href="#services" class="btn">Explore Services</a>
+</div>
+</div>
+
+<section>
+<h2 class="section-title">About Real Home AI</h2>
+
+<p style="text-align:center;">
+Real Home AI helps users buy, sell, and rent homes through an
+AI-powered chatbot. Users can explore neighborhoods, schools,
+property features, pricing information, and connect with
+real estate professionals.
+</p>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏠 Buy a Home</h3>
+<p>Find homes based on budget, location, schools, and preferences.</p>
+</div>
+
+<div class="card">
+<h3>🏘️ Sell a Home</h3>
+<p>Learn about pricing, market trends, and selling assistance.</p>
+</div>
+
+<div class="card">
+<h3>🏢 Rent a Property</h3>
+<p>Explore rental properties that fit your needs and budget.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">How It Works</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>1. Start a Conversation</h3>
+<p>Click the chatbot in the lower-right corner.</p>
+</div>
+
+<div class="card">
+<h3>2. Share Preferences</h3>
+<p>Tell Real Home AI what you're looking for.</p>
+</div>
+
+<div class="card">
+<h3>3. Explore Recommendations</h3>
+<p>Receive suggestions and information.</p>
+</div>
+
+<div class="card">
+<h3>4. Take Action</h3>
+<p>Schedule a showing or contact an agent.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Features</h2>
+
+<div class="cards">
+
+<div class="card">✅ Home Recommendations</div>
+<div class="card">✅ Rental Recommendations</div>
+<div class="card">✅ Mortgage Information</div>
+<div class="card">✅ School Information</div>
+<div class="card">✅ Neighborhood Information</div>
+<div class="card">✅ Property Features</div>
+<div class="card">✅ Contact Agent</div>
+<div class="card">✅ Schedule Showings</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📧 realhomeai@email.com</p>
+<p>📞 (817) 555-1234</p>
+<p>📍 Fort Worth, Texas</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Help Us Improve</h2>
+
+<div class="feedback">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Tell us how we can improve Real Home AI"></textarea>
+
+<button>Submit Feedback</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Real Home AI | Texas Wesleyan University Project</p>
+
+</footer>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<df-messenger
+intent="WELCOME"
+chat-title="RealHomeAI"
+agent-id="c33dc705-838a-452f-b382-0defeb71419c"
+language-code="en">
+</df-messenger>
+
+</body>
+</html>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="RealHomeAI"
+  agent-id="c33dc705-838a-452f-b382-0defeb71419c"
+  language-code="en"
+></df-messenger>
